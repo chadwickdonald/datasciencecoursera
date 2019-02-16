@@ -1,4 +1,4 @@
-create_test_tables <- function() {
+clean_up_data <- function() {
   library(dplyr)
   setwd("/Users/chadwickbidwell/workspace/data_science")
   activity_labels <- read.table('uci_har_dataset/activity_labels.txt')
@@ -40,7 +40,20 @@ create_test_tables <- function() {
   # this gets only std/mean data
   data <- merged_data[col_headers]
   
+  # rename column headers
+  col_headers_renamed <- gsub('-mean', 'Mean', col_headers)
+  col_headers_renamed <- gsub('-std', 'Std', col_headers_renamed)
+  col_headers_renamed <- gsub('[-()]', '', col_headers_renamed)
+  colnames(data) <- col_headers_renamed
+  
   #create average for each col
   avg_data <- aggregate(data[,3:88], list(data$subject, data$activity), mean)
+  colnames(avg_data)[1] = 'subject'
+  colnames(avg_data)[2] = 'activity'
+  
+  # write data to file
+  write.table(avg_data, 'tidy_data.txt')
+  
+  avg_data
 }
 
