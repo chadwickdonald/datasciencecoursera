@@ -1,5 +1,9 @@
 # Code Book
 
+These are the variables in tidy_data.txt
+
+## variables
+
 "subject"                            
 "activity"                           
 "tBodyAccMeanX"                      
