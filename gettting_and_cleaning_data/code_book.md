@@ -1,8 +1,6 @@
 # Code Book
 
-## Activity
-
-Here are the values for activity
+## Activity values
 
 * WALKING 
 * WALKING_UPSTAIRS 
@@ -10,8 +8,6 @@ Here are the values for activity
 * SITTING
 * STANDING 
 * LAYING 
-
-These are the tother variables in tidy_data.txt
 
 ## variables
 
