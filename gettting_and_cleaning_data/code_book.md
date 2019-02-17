@@ -4,12 +4,12 @@
 
 Here are the values for activity
 
-WALKING 
-WALKING_UPSTAIRS 
-WALKING_DOWNSTAIRS 
-SITTING
-STANDING 
-LAYING 
+* WALKING 
+* WALKING_UPSTAIRS 
+* WALKING_DOWNSTAIRS 
+* SITTING
+* STANDING 
+* LAYING 
 
 These are the tother variables in tidy_data.txt
 
